@@ -1,0 +1,37 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Navegacion.View.IncidenciaPage">
+    <ContentPage.Content>
+        <StackLayout>
+            <Image Source="title"></Image>
+            <Label Text="Usuario" HorizontalOptions="Center"/>
+            <Entry Placeholder="Ingrese documento" HorizontalOptions="Center"
+                   Text="{Binding FriendModel.Usuario, Mode=TwoWay}"/>
+            <Label Text="Área de Trabajo" HorizontalOptions="Center"/>
+            <Entry Placeholder="Ingrese área de Trabajo" HorizontalOptions="Center"
+                   Text="{Binding FriendModel.Area, Mode=TwoWay}"/>
+            <Label Text="Observaciones" HorizontalOptions="Center"/>
+            <Entry Placeholder="Describa la condición" HorizontalOptions="Center"
+                   Text="{Binding FriendModel.Observaciones, Mode=TwoWay}"/>
+            <Label Text="Fecha Registro" HorizontalOptions="Center"/>
+            <DatePicker x:Name="Date" HorizontalOptions="Center"
+                        Date="{Binding FriendModel.Fecha, Mode=TwoWay}"></DatePicker> 
+            <StackLayout>
+                <Button Text="Guardar"
+                        HeightRequest="50"
+                        BackgroundColor="#6DC00C"
+                        TextColor="White"
+                        HorizontalOptions="Center"
+                        Command="{Binding SaveCommand}"/>
+                <Button Text="Eliminar"
+                        HeightRequest="50"
+                        BackgroundColor="#6DC00C"
+                        TextColor="White"
+                        HorizontalOptions="Center"
+                        Command="{Binding DeleteCommand}"
+                        IsEnabled="{Binding IsEnabled}"/>
+            </StackLayout>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

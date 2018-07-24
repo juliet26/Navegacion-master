@@ -1,0 +1,45 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Navegacion.View.UsuarioPage">
+    <ContentPage.Content>
+        <ScrollView>
+        <StackLayout>
+                <Image Source="title"></Image>
+            <Label Text="Identificación" HorizontalOptions="Center"/>
+            <Entry Placeholder="Ingrese Identificación" HorizontalOptions="Center"
+                   Text="{Binding FriendModel.Identificacion, Mode=TwoWay}"/>
+                <Label Text="Nombres" HorizontalOptions="Center"/>
+                <Entry Placeholder="Ingrese Nombres" HorizontalOptions="Center"
+                   Text="{Binding FriendModel.Nombres, Mode=TwoWay}"/>
+                <Label Text="Apellidos" HorizontalOptions="Center"/>
+                <Entry Placeholder="Ingrese Apellidos" HorizontalOptions="Center"
+                   Text="{Binding FriendModel.Apellidos, Mode=TwoWay}"/>
+                <Label Text="Ingrese Cargo" HorizontalOptions="Center"/>
+                <Entry Placeholder="Ingrese Cargo" HorizontalOptions="Center"
+                   Text="{Binding FriendModel.Cargo, Mode=TwoWay}"/>
+                <Label Text="Area de Trabajo" HorizontalOptions="Center"/>
+                <Entry Placeholder="Ingrese Area de Trabajo" HorizontalOptions="Center"
+                   Text="{Binding FriendModel.Area, Mode=TwoWay}"/>
+                <Label Text="Sede" HorizontalOptions="Center"/>
+                <Entry Placeholder="Ingrese Sede" HorizontalOptions="Center"
+                   Text="{Binding FriendModel.Sede, Mode=TwoWay}"/>
+                <Label Text="Fecha Correo" HorizontalOptions="Center"/>
+                <Entry Placeholder="Ingrese Correo" HorizontalOptions="Center"
+                   Text="{Binding FriendModel.Correo, Mode=TwoWay}"/>
+                <Label Text="Fecha Password" HorizontalOptions="Center"/>
+                <Entry Placeholder="Ingrese Password" HorizontalOptions="Center"
+                   Text="{Binding FriendModel.Password, Mode=TwoWay}"/>
+            <StackLayout>
+                <Button Text="Iniciar Sesión"
+                        HeightRequest="50"
+                        BackgroundColor="#6DC00C"
+                        TextColor="White"
+                        HorizontalOptions="Center"
+                        Command="{Binding SaveCommand}"/>
+               
+            </StackLayout>
+        </StackLayout>
+        </ScrollView>
+    </ContentPage.Content>
+</ContentPage>

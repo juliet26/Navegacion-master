@@ -1,0 +1,21 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<TabbedPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Navegacion.View.ActiveBreaks">
+  <!--Pages can be added as references or inline-->
+    <ContentPage Title="Pausas activas">
+        <Image Source="pausas01.png">
+        </Image> </ContentPage>
+    <ContentPage Title="3 veces 5-10s">
+        <Image Source="pausas03.png">
+        </Image>
+    </ContentPage>
+    <ContentPage Title="3 veces 5-10s">
+        <Image Source="pausas02.png">
+        </Image>
+    </ContentPage>
+    <ContentPage Title="2 veces 10-20s">
+        <Image Source="pausas04.png">
+        </Image>
+    </ContentPage>
+</TabbedPage>

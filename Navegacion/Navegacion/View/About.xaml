@@ -1,0 +1,44 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Navegacion.View.About">
+    <ContentPage.Content>
+        <StackLayout>
+            <Image Source="title.png"
+                       HorizontalOptions="Center"></Image>
+            <Grid>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition></ColumnDefinition>
+                    <ColumnDefinition></ColumnDefinition>
+                </Grid.ColumnDefinitions>
+                <Grid.RowDefinitions>
+                    <RowDefinition></RowDefinition>
+                    <RowDefinition></RowDefinition>
+                    <RowDefinition></RowDefinition>
+                    <RowDefinition></RowDefinition>
+                    <RowDefinition></RowDefinition>
+                    <RowDefinition></RowDefinition>
+                    <RowDefinition></RowDefinition>
+                    <RowDefinition></RowDefinition>
+                </Grid.RowDefinitions>
+                <Label Text="¿Conoces la normativa de salud y seguridad en el trabajo?"
+                       Grid.ColumnSpan="2"
+                       Font="16"
+                       HorizontalOptions="Center"
+                       HorizontalTextAlignment="Center"></Label>
+                <Label Text="Enlace" TextColor="Blue" >
+                    <Label.GestureRecognizers>
+                        <TapGestureRecognizer Command="{Binding NavigateCommand}"
+                                              CommandParameter="https://xamarin.com" />
+                    </Label.GestureRecognizers>
+                </Label>
+                <Button Image="calendar.png"
+                        Grid.Column="1"
+                        HorizontalOptions="Center"
+                        Grid.Row="10"
+                        BackgroundColor="Transparent"
+                        Command="{Binding CalendarCommand}"></Button>
+                </Grid>
+            </StackLayout>
+    </ContentPage.Content>
+</ContentPage>
